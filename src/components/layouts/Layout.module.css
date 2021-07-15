@@ -1,0 +1,9 @@
+.main {
+  margin: 1rem auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* width: 90%; */
+  max-width: 150rem;
+  padding-right: 3rem;
+  padding-left: 2rem;
+}
