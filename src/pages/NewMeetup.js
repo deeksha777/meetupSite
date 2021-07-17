@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
+import { Helmet } from "react-helmet";
 
 function NewMeetupPage() {
   const history = useHistory();
@@ -21,6 +22,10 @@ function NewMeetupPage() {
 
   return (
     <section>
+      <Helmet>
+        <title>Add New Meetup</title>
+        <meta name="description" content="Add exciting New Meetups" />
+      </Helmet>
       <h1>New Meetup</h1>
       <NewMeetupForm onAddMeetup={addMeetupHandler} />
     </section>

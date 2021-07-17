@@ -1,5 +1,6 @@
 import MeetupList from "../components/meetups/MeetupList";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +39,13 @@ function AllMeetupsPage() {
 
   return (
     <section>
+      <Helmet>
+        <title>Lets Meet</title>
+        <meta
+          name="description"
+          content="Browse for all the greatest of the Meetups."
+        />
+      </Helmet>
       <MeetupList meetups={loadedMeetups} />
     </section>
   );

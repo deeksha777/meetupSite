@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import FavoritesContext from "../store/favorites-context";
 import MeetupList from "../components/meetups/MeetupList";
+import { Helmet } from "react-helmet";
 
 function FavoritesPage() {
   const favoritesCtx = useContext(FavoritesContext);
@@ -15,7 +16,15 @@ function FavoritesPage() {
 
   console.log("content::", content);
 
-  return <section>{content}</section>;
+  return (
+    <section>
+      <Helmet>
+        <title>Favorite Meetup Places</title>
+        <meta name="description" content="Favorite your Meetups" />
+      </Helmet>
+      {content}
+    </section>
+  );
 }
 
 export default FavoritesPage;
